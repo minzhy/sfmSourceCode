@@ -7,6 +7,10 @@ def quat2Rot(q):
     # MyEuler = R.from_quat([q]).as_euler('zyx')
     # # print(MyEuler)
     # MyRot = R.from_euler('zyx',MyEuler)
+    q[0] = float(q[0])
+    q[1] = float(q[1])
+    q[2] = float(q[2])
+    q[3] = float(q[3])
     MyRot = np.zeros((3,3))
     MyRot[0][0] = 1.0 - 2.0*q[2]*q[2] - 2.0*q[3]*q[3]
     MyRot[0][1] = 2.0*q[1]*q[2] - 2.0*q[0]*q[3]

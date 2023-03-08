@@ -43,5 +43,6 @@ def testMaxAndMinDim(path):
 
 if __name__ == '__main__':
     x = findPlane('./')
+    print(x)
     k = testMaxAndMinDim('./')
     print(k)

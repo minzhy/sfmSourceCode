@@ -5,9 +5,8 @@ import sqlite3
 import cv2
 import IDWM
 
-cameras = {}
-
 def readCamInfo(path):
+    cameras = {}
     with open(path+"cameras.txt") as f:
         for i in range(3):
             f.readline()
@@ -25,7 +24,7 @@ def readCamInfo(path):
             camera = f.readline()
             camera = f.readline().split()
 
-        print(cameras)
+    return cameras
 
 
 
