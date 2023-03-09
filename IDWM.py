@@ -6,8 +6,10 @@ def AbsouteToRelative(R0,t0,R1,t1):
     '''
     R12 = R2 * R1.T
     '''
-    R =  R1 * R0.T
-    t = t1.reshape(3,-1) - R.dot( t0.reshape(3,-1))
+    # R =  R1 * R0.T
+    # t = t1.reshape(3,-1) - R.dot(t0.reshape(3,-1))
+    R =  R0.T.dot(R1)
+    t = R0.T.dot(t1.reshape(3,-1) - t0.reshape(3,-1))
     return R,t
 
 def quat2Rot(q):

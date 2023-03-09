@@ -131,8 +131,8 @@ def reconFromOne(Kpts,camInPara,camOuPara,plane):
                 # test satisfy
                 if abs(benchmark) < 0.5:
                     # print(wordPt3d)
-                    f.write(f"{idx} {wordPt3d[0][0]} {wordPt3d[1][0]} {wordPt3d[2][0]} \
-                    {Kpts[image_id][cnt][2][2]} {Kpts[image_id][cnt][2][1]} {Kpts[image_id][cnt][2][0]} 0 1 0\n")
+                    f.write(f"{idx} {float(wordPt3d[0][0])} {float(wordPt3d[1][0])} {float(wordPt3d[2][0])} {Kpts[image_id][cnt][2][2]} {Kpts[image_id][cnt][2][1]} {Kpts[image_id][cnt][2][0]} 0 1 0\n")
+                    idx+=1
                 cnt+=1
 
 def parseCol(Kpts):
